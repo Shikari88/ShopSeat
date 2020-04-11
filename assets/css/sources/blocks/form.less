@@ -1,0 +1,42 @@
+.form{
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    text-align: center;
+  }
+  &__group {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    font-size: 2rem;
+    color: @color-blue;
+    font-weight: 700;
+  }
+  &__subtitle {
+    font-size: 1.35rem;
+    margin: 1.5rem 0;
+    font-weight: 500;
+
+  }
+  &__control {
+    font-size: 1.3rem;
+    padding: 1.5rem 0;
+    text-align: center;
+    border-radius: 25px;
+    border: 2px solid @color-gray;
+    color: @color-gray-text;
+    margin: 0.5rem 0 1.5rem 0;
+    &:focus{
+      outline: none;
+      background: @color-gray;
+      color: #000;
+    }
+    &:hover{
+      border: 2px solid @color-blue;
+    }
+  }
+
+
+}
