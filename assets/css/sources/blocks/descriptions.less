@@ -1,0 +1,43 @@
+.descriptions {
+  &__container {
+    display: flex;
+    padding: 14rem 0 6rem 0;
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    //margin-left: 8rem;
+    &--reverse {
+      text-align: right;
+    }
+  }
+  &__img {
+    position: relative;
+  }
+  &__armchair {
+
+  }
+
+  &__arrow {
+    position: absolute;
+    z-index: 1;
+    &--left-top {
+      right: 12.3rem;
+      top: 1rem;
+    }
+    &--left-bottom {
+      bottom: 12.5rem;
+      right: 13.5rem;
+    }
+    &--right-top {
+      left: 11.4rem;
+      top: -4rem;
+    }
+    &--right-bottom {
+      bottom: 7rem;
+      left: 11rem;
+    }
+  }
+
+}
