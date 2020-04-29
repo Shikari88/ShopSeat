@@ -5,15 +5,19 @@ html {
   font-size: 62.5%; //для адаптивности. Чтобы было удобно считать в rem. В % задаем сво-во, чтобы считать от шрифта по умолчанию 16px
 }
 body {
-  font-size: 1.6rem;
+  //font:
+  font-size: 1.6rem ;
   font-family: 'Source Sans Pro', sans-serif;
-  // можно было все объедтнить, но пока оставим так
+  // если объединить все в font, то в IE10 се шрифты и размеры полностью сбрасываются. Если разделить, то отображаются.
   margin: 0;
   color: @color-black-text;
 }
 .container {
   max-width: 94rem;
   margin: 0 auto;
+  @media screen and (max-width:768px) {
+  max-width: 70rem;
+  }
 }
 .hidden {
   display: none;

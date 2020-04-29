@@ -1,17 +1,16 @@
 .logo {
-  //text-align: center;
-  //position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+
   &__img {
     width: 7.4rem;
-    height: 7.4rem;
-    background: url("./../images/logo.png") no-repeat;
-    //display: inline-block;
-    margin-right: 1.6rem;
-
+    margin-left: 1rem;
+    img {
+      width: 100%;
+      border: 0;// for IE10
+    }
   }
   &__text {
     text-transform: uppercase;

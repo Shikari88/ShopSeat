@@ -4,17 +4,21 @@
         <meta charset="UTF-8">
         <title>Example_1</title>
         <link rel="stylesheet" href="assets/css/main.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1"><!--viewport - видимая область страницы без прокрутки
-        мета тег нужен для адаптивности сайта под мобильные устройства (перестройка)-->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--Для кроссбраузерности Microsoft Edge-->
+        <meta name="viewport" content="width=device-width, initial-scale=1"><!--viewport - отключает сужение страницы под
+        область видимости на в моб браузерах-->
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"><!--Сообращает браузеру IE о работе в последней версии по умолчанию-->
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900&display=swap&subset=cyrillic" rel="stylesheet">
     </head>
     <body>
         <header class="header">
             <div class="header__container container">
                 <div class="header__logo logo">
-                    <div class="logo__img"></div>
-                    <div class="logo__text">Крылатко</div>
+                    <a href="#offer">
+                        <div class="logo__img">
+                            <img src="./assets/images/logo.png" alt="Логотип">
+                        </div>
+                        <div class="logo__text">Крылатко</div>
+                    </a>
                 </div>
                 <div class="header__contacts callback">
                     <div class="callback__phone">+7 (950) 733-31-70</div>
@@ -22,10 +26,9 @@
                 </div>
             </div>
         </header>
-        <div class="offer">
+        <div class="offer" id="offer">
             <div class="container">
                 <div class="offer__container">
-                <!--<div class="offer__hidden hidden"></div>-->
                     <div class="offer__header">
                         <h1 class="offer__title">Серцифицированные детские бескаркасные автокресла</h1>
                         <div class="offer__subtitle">с бесплатной доставкой по Санкт-Петербургу</div>
@@ -70,7 +73,7 @@
                 <div class="advantage advantage__item advantage__item--reverse">
                     <div class="advantage__text">
                         <div class="advantage__title">Подходит к большинству групп детей</div>
-                        <div class="advantage__subtitle">втокресло рассчитано на возраст от 1 года до 12 лет (от 9 кг до 36 кг)
+                        <div class="advantage__subtitle">Кресло рассчитано на возраст от 1 года до 12 лет (от 9 кг до 36 кг).
                         Имеет пятиточную фиксацию ребенка, как в гоночном автомобиле.</div>
                     </div>
                     <div class="advantage__img">
@@ -108,8 +111,11 @@
                 <div class="discount__desc">
                     <div class="discount__desc-text">
                         <h2 class="discount__title">Скидка 28%</h2>
-                        <div class="discount__subtitle">и бесплатная доставка <span class="discount__icon-gift">
-                     <img src="./assets/images/icon_gift.png" alt="Подарок"> в подарок</span></div>
+                        <div class="discount__subtitle">и бесплатная доставка
+                            <div class="discount__icon-gift">
+                                <img src="./assets/images/icon_gift.png" alt="Подарок"> в подарок
+                            </div>
+                        </div>
                     </div>
                     <div class="discount__form form">
                         <div class="form__text">
@@ -137,7 +143,7 @@
                 </div>
                 <div class="stats__item stats-box">
                     <div class="stats-box__number">1 254</div>
-                    <div class="stats-box__text">сделано</div>
+                    <div class="stats-box__text">Заказчика</div>
                 </div>
                 <div class="stats__item stats-box">
                     <div class="stats-box__number">45</div>
@@ -150,7 +156,7 @@
                 <h2 class="certification__header">Сертификация товара</h2>
                 <div class="certification__main">
                     <div class="certification__img">
-                        <img src="./assets/images/certification.png" alt="Сертификат" class="">
+                        <img src="./assets/images/certification.png" alt="Сертификат">
                     </div>
                     <div class="certification__desc">
                         <div class="certification__subtitle">
@@ -174,12 +180,12 @@
         <div class="descriptions">
             <div class="descriptions__container container">
                 <div class="descriptions__items descriptions__items--reverse">
-                    <div class="desc-item desc-item--pd-right">
+                    <div class="desc-item">
                         <h2 class="desc-item__header">Крепкие ремни</h2>
                         <div class="desc-item__text">Тесьма ременная имеет плотную структуру и выдерживает большие нагрузки.
                         </div>
                     </div>
-                    <div class="desc-item desc-item--pd-right">
+                    <div class="desc-item">
                         <h2 class="desc-item__header">Удобная установка</h2>
                         <div class="desc-item__text">Достаточно продеть штатный ремень безопасности автомобиля,
                         через специальный карман устройства "ВИННИ" и застегнуть в замок.
@@ -188,19 +194,18 @@
                 </div>
                 <div class="descriptions__img">
                     <img src="./assets/images/arrows/arrow_left_top.png" alt="Стрелка" class="descriptions__arrow descriptions__arrow--left-top">
-                    <img src="./assets/images/arrows/arrow_left_bottom.png" alt="Стрелка" class="descriptions__arrow descriptions__arrow--left-bottom">
-                    <img src="./assets/images/descriptions.png" alt="Кресло" class="descriptions__armchair">
                     <img src="./assets/images/arrows/arrow_right_top.png" alt="Стрелка" class="descriptions__arrow descriptions__arrow--right-top">
+                    <img src="./assets/images/arrows/arrow_left_bottom.png" alt="Стрелка" class="descriptions__arrow descriptions__arrow--left-bottom">
                     <img src="./assets/images/arrows/arrow_right_bottom.png" alt="Стрелка" class="descriptions__arrow descriptions__arrow--right-bottom">
                 </div>
                 <div class="descriptions__items">
-                    <div class="desc-item desc-item--pd-left">
+                    <div class="desc-item">
                         <h2 class="desc-item__header">Безопасные материалы</h2>
                         <div class="desc-item__text">При пошиве используется ткань "Оксфорд", сетка Air-mesh 3-х слойная,
                         поролон, спанбонд, халлофайбер. Все материалы экологически чистые, сертифицированы.
                         </div>
                     </div>
-                    <div class="desc-item desc-item--pd-left">
+                    <div class="desc-item">
                         <h2 class="desc-item__header">Прочные крепления</h2>
                         <div class="desc-item__text">Устройство  ВИННИ" имеет пятиточечную систему крепления.
                         Пряжки производят из высокопрочных пластиков, имеющих хорошие показатели упругости.
@@ -244,23 +249,25 @@
                 </div>
                 <div class="comparison__main">
                     <div class="comparison__text comparison__text--reverse">
-                        <div class="comparison__text-item">боковые стенки преграда для движений ребенка, особенно в зимний период, когда много одежды</div>
+                        <div class="comparison__text-item">боковые стенки преграда для движений ребенка, особенно в
+                            зимний период, когда много одежды</div>
                         <div class="comparison__text-item">необходимо менять автокресло по мере увеличения веса ребенка</div>
                         <div class="comparison__text-item">имеет 5-ти точечную фиксацию ребенка</div>
                         <div class="comparison__text-item">нужно убирать в багажник, при перевозки взрослых или каких либо грузов</div>
                     </div>
                     <div class="comparison__img">
-                        <img src="./assets/images/arrows/arrow_compar_left_1.png" alt="Стрелка" class="comparison__arrow-lf-1">
-                        <img src="./assets/images/arrows/arrow_compar_left_2.png" alt="Стрелка" class="comparison__arrow-lf-2">
-                        <img src="./assets/images/arrows/arrow_compar_left_3.png" alt="Стрелка" class="comparison__arrow-lf-3">
-                        <img src="./assets/images/arrows/arrow_compar_left_4.png" alt="Стрелка" class="comparison__arrow-lf-4">
-                    </div>
-                    <img src="./assets/images/comparison.png" alt="Фотография кресла">
-                    <div class="comparison__img">
-                        <img src="./assets/images/arrows/arrow_compar_right_1.png" alt="Стрелка" class="comparison__arrow-rg-1">
-                        <img src="./assets/images/arrows/arrow_compar_right_2.png" alt="Стрелка" class="comparison__arrow-rg-2">
-                        <img src="./assets/images/arrows/arrow_compar_right_3.png" alt="Стрелка" class="comparison__arrow-rg-3">
-                        <img src="./assets/images/arrows/arrow_compar_right_4.png" alt="Стрелка" class="comparison__arrow-rg-4">
+                        <div class="comparison__img--left">
+                            <img src="./assets/images/arrows/arrow_compar_left_1.png" alt="Стрелка" class="comparison__arrow comparison__arrow-lf-1">
+                            <img src="./assets/images/arrows/arrow_compar_left_2.png" alt="Стрелка" class="comparison__arrow comparison__arrow-lf-2">
+                            <img src="./assets/images/arrows/arrow_compar_left_3.png" alt="Стрелка" class="comparison__arrow comparison__arrow-lf-3">
+                            <img src="./assets/images/arrows/arrow_compar_left_4.png" alt="Стрелка" class="comparison__arrow comparison__arrow-lf-4">
+                        </div>
+                        <div class="comparison__img--right">
+                            <img src="./assets/images/arrows/arrow_compar_right_1.png" alt="Стрелка" class="comparison__arrow comparison__arrow-rg-1">
+                            <img src="./assets/images/arrows/arrow_compar_right_2.png" alt="Стрелка" class="comparison__arrow comparison__arrow-rg-2">
+                            <img src="./assets/images/arrows/arrow_compar_right_3.png" alt="Стрелка" class="comparison__arrow comparison__arrow-rg-3">
+                            <img src="./assets/images/arrows/arrow_compar_right_4.png" alt="Стрелка" class="comparison__arrow comparison__arrow-rg-4">
+                        </div>
                     </div>
                     <div class="comparison__text comparison__text--blue">
                         <div class="comparison__text-item">дает полную безопасную свободу ребёнка ОСТАВЛЯЕТ СПИНКУ СИДЕНИЕ ЧИСТЫМ</div>
@@ -290,7 +297,14 @@
         </div>
         <div class="footer">
             <div class="footer__container container">
-                <div class="footer__logo logo"></div>
+                <div class="footer__logo logo">
+                    <a href="#offer">
+                        <div class="logo__img">
+                            <img src="./assets/images/logo.png" alt="Логотип">
+                        </div>
+                        <div class="logo__text">Крылатко</div>
+                    </a>
+                </div>
                 <a href="" class="footer__privacy">Политика конфидециальности</a>
                 <div class="footer__requisites">
                     Инн 999999999

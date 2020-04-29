@@ -1,14 +1,14 @@
 .offer {
-  background: url("./../images/IMG_offer.png") no-repeat;
-  background-position-x: 49.5%;
-  height: auto;
-  background-size: cover;
+  background:url("./../images/IMG_offer.png") #ebf2f7 no-repeat center/cover  ;
+  @media screen and (max-width:768px) {
+    background-position: 37% 0;
+  }
   &__container {
     display: flex;
     flex-wrap: wrap;
     width: 63%;
     margin-left: auto;
-    text-align: right;
+    //text-align: right;
   }
   &__form {
     width: 30rem;
@@ -16,6 +16,17 @@
     background: #fff;
     border-radius: 13%;
     margin: 6rem 0 5rem auto;
+    @media screen and (max-width: 768px) {
+      width: 35rem;
+    }
+  }
+  &__header {
+  margin-top: 7rem;
+    width: 59rem;//Для IE 10
+    text-align: right;
+    @media screen and (max-width:768px) {
+      text-align: center;
+    }
   }
   &__title {
     font-size: 4.1rem;
@@ -24,8 +35,12 @@
     font-size: 2.7rem;
     color: @color-blue-dark;
     margin-top: 1.7rem;
+    @media screen and (max-width:768px) {
+      background-color: #fff;
+      border-radius: 7px;
+      padding: 1rem;
+    }
+
   }
-  &__header {
-    margin-top: 7rem;
-  }
+
 }

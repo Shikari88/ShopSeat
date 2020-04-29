@@ -1,6 +1,9 @@
 .advantages {
   &__container {
     max-width: 78rem;
+    @media screen and (max-width:768px) {
+      max-width: 70rem;
+    }
   }
   &__header {
     font-size: 3.6rem;
@@ -9,10 +12,16 @@
     margin: 8rem auto;
   }
   &__arrow {
-    text-align: center;
     padding-right: 2rem;
+    width: 19.9rem;
+    margin: 0 auto;
+    img {
+      width: 100%;
+      display: block;
+    }
     &--left {
-      padding-right: 13rem;
+      position: relative;
+      right: 4rem;
     }
   }
 }

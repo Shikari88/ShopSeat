@@ -7,8 +7,6 @@
       &--reverse{
         display: flex;
         flex-direction: row-reverse;
-
-
     }
   }
   &__text {
@@ -23,14 +21,24 @@
   &__subtitle {
     font-size: 1.8rem;
     font-weight: 300;
+    @media screen and (max-width: 768px) {
+      font-size: 2.5rem;
+      font-weight: 500;
+    }
   }
   &__img-shadow {
     width: 8rem;
-    margin-left: 36%;
+    margin: 0 auto;
     height: 1rem;
     background: #e9e9eb;
     display: block;
     border-radius: 1rem;
     box-shadow: 0 0 2rem 1rem #e9e9eb;
+  }
+  &__img {
+    width: 30rem;
+    img {
+      width: 100%;
+    }
   }
 }

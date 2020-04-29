@@ -9,6 +9,10 @@
   vertical-align: middle;// в разных браузерах мб разное. Задаем по-умолчанию
   border-radius: 2.5rem;
   padding: 1.5rem 0;
+  font-size: 1.4rem;
+  @media screen and (max-width: 768px){
+    font-size: 2rem;
+  }
   &--blue {
     background: @color-blue;
     color: #fff;
@@ -30,4 +34,5 @@
   &--shadow{
     box-shadow: 0 0.4rem 0.5rem 0 #3c21d173;
   }
+
 }
