@@ -13,6 +13,9 @@
   @media screen and (max-width: 768px){
     font-size: 2rem;
   }
+  @media screen and (max-width: 425px) {
+    font-size: 1.6rem;
+  }
   &--blue {
     background: @color-blue;
     color: #fff;
@@ -21,6 +24,9 @@
   &--blue:hover{
     background: @color-gray;
     color: #000;
+    @media screen and (max-width: 768px){
+      box-shadow: 0 0 1rem 1rem @color-blue-light;
+    }
   }
   &--blue:focus{
     background: #CACACA;
@@ -34,5 +40,10 @@
   &--shadow{
     box-shadow: 0 0.4rem 0.5rem 0 #3c21d173;
   }
+  &--shadow-light{
+    @media screen and (max-width: 768px), (max-width: 800px) {
+      box-shadow: 0 0 1rem 1rem;
+    }
 
+  }
 }

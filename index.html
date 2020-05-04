@@ -4,10 +4,11 @@
         <meta charset="UTF-8">
         <title>Example_1</title>
         <link rel="stylesheet" href="assets/css/main.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1"><!--viewport - отключает сужение страницы под
-        область видимости на в моб браузерах-->
-        <meta http-equiv="X-UA-Compatible" content="ie=edge"><!--Сообращает браузеру IE о работе в последней версии по умолчанию-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900&display=swap&subset=cyrillic" rel="stylesheet">
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+        <script src="assets/js/public/es6/map.js" type="text/javascript"></script>
     </head>
     <body>
         <header class="header">
@@ -156,7 +157,9 @@
                 <h2 class="certification__header">Сертификация товара</h2>
                 <div class="certification__main">
                     <div class="certification__img">
-                        <img src="./assets/images/certification.png" alt="Сертификат">
+                        <a href="assets/images/certificate-bg.jpg" target="_blank">
+                            <img src="assets/images/certificate-sm.png" alt="Сертификат">
+                        </a>
                     </div>
                     <div class="certification__desc">
                         <div class="certification__subtitle">
@@ -175,6 +178,7 @@
                         <p class="certification__text">Стирать кресло можно при температуре 30 градусов.</p>
                     </div>
                 </div>
+                <a href="assets/images/certificate-bg.jpg" target="_blank" class="certification__show-document hidden">Посмотреть сертификат</a>
             </div>
         </div>
         <div class="descriptions">
@@ -218,7 +222,7 @@
             <div class="free-delivery__container container">
                 <div class="free-delivery__main">
                     <div class="cost free-delivery__cost">
-                        <div class="cost__header cost__header-free-delivery">Скидка 28%</div><!--Почитать про миксы класоов в бэм при таких случаях-->
+                        <div class="cost__header cost__header-free-delivery">Скидка 28%</div>
                         <div class="cost__before cost__before-free-delivery">2545 р.</div>
                         <div class="cost__after cost__after-free-delivery">1850 р.</div>
                     </div>
@@ -232,7 +236,7 @@
                         <div class="form__group">
                             <label for="free-delivery_phone" class="hidden">Ваше телефон</label>
                             <input class="form__control" type="tel" name="phone" id="free-delivery_phone" placeholder="Ваш телефон">
-                            <button class="btn btn--blue btn--uptext btn--shadow">Перезвоните мне</button>
+                            <button class="btn btn--blue btn--uptext btn--shadow btn--shadow-light">Перезвоните мне</button>
                         </div>
                     </div>
                 </div>
@@ -249,11 +253,11 @@
                 </div>
                 <div class="comparison__main">
                     <div class="comparison__text comparison__text--reverse">
-                        <div class="comparison__text-item">боковые стенки преграда для движений ребенка, особенно в
+                        <div class="comparison__text-item comparison__text-item--br-right">боковые стенки преграда для движений ребенка, особенно в
                             зимний период, когда много одежды</div>
-                        <div class="comparison__text-item">необходимо менять автокресло по мере увеличения веса ребенка</div>
-                        <div class="comparison__text-item">имеет 5-ти точечную фиксацию ребенка</div>
-                        <div class="comparison__text-item">нужно убирать в багажник, при перевозки взрослых или каких либо грузов</div>
+                        <div class="comparison__text-item comparison__text-item--br-right">необходимо менять автокресло по мере увеличения веса ребенка</div>
+                        <div class="comparison__text-item comparison__text-item--br-right">имеет 5-ти точечную фиксацию ребенка</div>
+                        <div class="comparison__text-item comparison__text-item--br-right">нужно убирать в багажник, при перевозки взрослых или каких либо грузов</div>
                     </div>
                     <div class="comparison__img">
                         <div class="comparison__img--left">
@@ -280,8 +284,7 @@
         </div>
         <div class="contacts">
             <div class="contacts__container container">
-                <div class="contacts__map">
-                    <img src="./assets/images/map.png" alt="карта">
+                <div class="contacts__map" id="map">
                 </div>
                 <div class="contacts__info">
                     <div class="contacts__icon">

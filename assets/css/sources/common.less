@@ -15,8 +15,17 @@ body {
 .container {
   max-width: 94rem;
   margin: 0 auto;
+  @media screen and (max-width:800px) {
+    max-width: 74rem;
+  }
   @media screen and (max-width:768px) {
   max-width: 70rem;
+  }
+  @media screen and (max-width:576px) {
+    max-width: 50rem;
+  }
+  @media screen and (max-width:425px) {
+    max-width: 30rem;
   }
 }
 .hidden {
