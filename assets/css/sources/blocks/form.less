@@ -1,11 +1,9 @@
 .form {
   display: flex;
   flex-direction: column;
+
   &__header {
     text-align: center;
-  }
-  &__inner {
-    //Задать width
   }
   &__group {
     display: flex;
@@ -61,6 +59,7 @@
       outline: none;
       background: @color-gray;
       color: #000;
+      border-color: @color-blue;
     }
     &:hover {
       border: 2px solid @color-blue;
@@ -102,5 +101,15 @@
         margin: 0.9rem;
       }
     }
+  }
+  &--popup {
+    display: none;
+    position: absolute;
+    top: 3%;
+    left: 37%;
+    z-index: 1;
+    padding: 3rem 4rem;
+    background: #fff;
+    border-radius: 13%;
   }
 }
