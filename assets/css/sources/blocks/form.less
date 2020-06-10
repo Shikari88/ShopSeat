@@ -4,6 +4,7 @@
 
   &__header {
     text-align: center;
+    position: relative;
   }
   &__group {
     display: flex;
@@ -29,8 +30,11 @@
   }
   &__subtitle {
     font-size: 1.35rem;
-    margin: 1.5rem 0;
+    margin: 1.5rem 0 2.5rem 0;
     font-weight: 500;
+    &--mb {
+      margin-bottom: 0;
+    }
     @media screen and (max-width: 768px) {
       font-size: 2.3rem;
       font-weight: 600;
@@ -39,12 +43,18 @@
       font-size: 1.84rem;
     }
   }
+  &__tooltip {
+    position: absolute;
+    top: 6.6rem;
+    left: 5.6rem;
+    color: @color-red-text;
+    display: none;
+  }
   &__subtitle-delivery {
     background: rgb(255, 255, 255);
     font-size: 2rem;
     color: @color-blue-light;
-    width: 23.4rem;
-    margin-left: 1.3rem;
+    width: 22rem;
     padding: 0.5rem 0;
   }
   &__control {
@@ -102,14 +112,18 @@
       }
     }
   }
-  &--popup {
-    display: none;
-    position: absolute;
-    top: 3%;
+  &--popup-order-call,&--popup-completed {
+    position: fixed;
+    top: 25%;
     left: 37%;
     z-index: 1;
     padding: 3rem 4rem;
     background: #fff;
     border-radius: 13%;
+    display: none;
+  }
+
+  &--popup-completed {
+    border-radius: 2.5rem;
   }
 }
