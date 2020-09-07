@@ -1,42 +1,128 @@
 "use strict";
-window.addEventListener("load", function () {
-    let control = document.getElementsByClassName("form__control");
-    let btn = document.getElementsByClassName("btn");
-    let tooltip = document.getElementsByClassName("form__tooltip");
-    let popupOrder = document.getElementById("popup-order-call");
-    let popupCompleted = document.getElementById("popup-completed");
-    let orderCall = document.querySelectorAll(".order-call");
-    let iconClose = document.querySelectorAll(".popup__icon-closed");
 
-    //при клике на ссылку выводим форму для ввода номера
-    let showForm = () => {
-        for (let i = 0; i < orderCall.length; i++) {
-            orderCall[i].addEventListener("click", () => {
-                document.body.classList.toggle("main");
-                popupOrder.style.display = "block";
-            });
-        }
+$(function () {
+    let control = $(".form__control");
+    let controlPopupOrder = $('#popup__phone');
+    //let btn = $(".btn");
+    let iconClose = $(".popup__icon-closed");
 
+    //форма с вводом значения
+    let popupOrder = $("#popup-order-call");
+    //меняем цвет сразу у всех форм без указания перебора через цикл элементов массива
+
+    //форма без ввода значений
+    let popupCompleted = $("#popup-completed");
+
+    //кнопка без поля ввода номера
+    let orderCall = $(".order-call");
+    //кнопка с полем ввода номера
+    let orderCompleted = $(".order-completed");
+
+
+
+    let showPopupOrder = ()=> {
+        orderCall.click(()=>{
+            //document.body.classList.toggle("main");//добавляем класс на JS
+            $("body").addClass("main");// На JQuery
+            popupOrder.show();
+        });
     };
-    showForm();
 
+    showPopupOrder();
+
+
+    let showPopupCompleted = ()=> {
+        orderCompleted.click(()=>{
+            //document.body.classList.toggle("main");
+            $("body").addClass("main");
+            popupCompleted.show();
+        });
+    };
+    showPopupCompleted();
 
     //закрываем всплывающую форму кликом на крестик
-    let closeForm = () => {
-        for (let i = 0; i < iconClose.length; i++) {
-            iconClose[i].addEventListener("click", () => {
-                document.body.classList.toggle("main", false);
-                popupOrder.style.display = "none";
-            });
-        }
+    iconClose.click (()=>{
+        $("body").removeClass("main", false);//удаляет класс
+        popupOrder.hide();
+        popupCompleted.hide();
+    });
 
-    };
-    closeForm();
+    $(".btn").click(function(){
+        //вызываем событие change на элементе
+        // popupOrder.change();
 
+             popupOrder.hide();
+
+    });
+
+    // orderCompleted.click(function () {
+    //     showPopupOrder();
+
+        // let target = $(this).data('target');
+        // $(target).show();
+        // if ($(target).is(':visible')) {
+        //     //то скрываем его
+        //     // $(target).slideUp();
+        //     // $(this).text('Развернуть');
+        // } else {
+        //     // а если не видим. то показываем
+        //     // $(target).slideDown();
+        //     // $(this).text('Свернуть');
+        // }
+    // })
+    /*for (let i=0; i<$(".btn").length; i++) {
+        $(".btn").click(()=> {
+            showPopupCompleted();
+            //если не ввел, то выводим надпись
+            // if (control[1].value === "") {
+            //     control[1].style.borderColor = "#d04545";
+            //     control[1].focus();
+            // } else {
+            //иначе скрываем форму
+            //toggle - добавляет, либо удаляет класс(если вторым
+            // параметром передается значение false
+            // document.body.classList.toggle("main");
+            // popupOrder[1].style.display = "none";
+            // popupCompleted[1].style.display = "block";
+            //     alert(2);
+            // }
+        });
+    }*/
 
 
     //проверяем, ввел ли пользователь информацию в поле ввода
-    /*btn[0].addEventListener("click", function () {
+    /*for (let i=0; i<btn.length; i++) {
+        btn[i].addEventListener("click", function () {
+
+
+
+            if (control[i].value === "") {
+                tooltip[i].style.display = "block";
+                control[i].style.borderColor = "#d04545";
+                control[i].focus();
+            } else {
+
+               // popupOrder[i].closeform();
+            }
+
+
+        });
+        btn[1].click(()=> {
+        //если не ввел, то выводим надпись
+        if (control[1].value === "") {
+            control[1].style.borderColor = "#d04545";
+            control[1].focus();
+        } else {
+            //иначе скрываем форму
+            //toggle - добавляет, либо удаляет класс(если вторым
+            // параметром передается значение false
+            document.body.classList.toggle("main");
+            popupOrder[1].style.display = "none";
+            popupCompleted[1    ].style.display = "block";
+        }
+    });
+    }*/
+    /*btn[0].click(function () {
         //если не ввел, то выводим надпись
         if (control[0].value === "") {
             tooltip[0].style.display = "block";
@@ -50,7 +136,7 @@ window.addEventListener("load", function () {
             popupOrder[0].style.display = "none";
             popupCompleted[0].style.display = "block";
         }
-    });
+    });*/
 
     /*iconClose[0].addEventListener("keydown", function(event) {
         if (event.code === 13) {
